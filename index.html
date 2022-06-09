@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Food Ordering</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav id="navbar" >
+
+        <div id="logo">
+            <!-- <img src="img/logo.png" alt=""> -->
+            <p class="logo">Food Site</p>
+        </div>
+
+        <ul>
+            <li class="item"  ><a href="/index.html"  class="nav-link active">Home</a></li>
+            <li class="item"><a href="/about.html">About</a></li>
+            <li class="item"><a href="/service.html">Service</a></li>
+            <li class="item"><a href="/contact.html">Contact us</a></li>
+        </ul>
+
+        <div class="right">
+            <button class="btn-2" data-bs-toggle="modal" data-bs-target="#loginModal"><a>Login</a></button>
+            <button class="btn-2" data-bs-toggle="modal" data-bs-target="#signupModal"><a>Signup</a></button>
+
+        </div>
+    </nav>
+
+
+    <!--Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="loginModalLabel">Modal title</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="PHP/login.php" method="post">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"  
+                                aria-describedby="emailHelp" name="email">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"name="password" >
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" >
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="font-size: 1.5rem;">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        style="font-size: 1.5rem;">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="signupModalLabel">Modal title</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="PHP/signup.php" method="post">
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label" class="size">Name</label>
+                            <input type="text" class="form-control" id="exampleInputName" 
+                                aria-describedby="emailHelp" name="name">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label" >Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" class="size"
+                                aria-describedby="emailHelp" name="email">
+                            <div id="emailHelp" class="form-text" >We'll never share your email with anyone
+                                else.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label" >Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Phone</label>
+                            <input type="phone" class="form-control" id="exampleInputPassword1" name="phone">
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1" class="size">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" class="size"
+                            style="font-size: 1.5rem;">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        style="font-size: 1.5rem;">Close</button>
+                    <button type="button" class="btn btn-primary" style="font-size: 1.5rem;">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="home">
+        <div class="box-1">
+            <h2 class="heading-1">Welcome to Myonline Meal</h2>
+            <p>A food web consists of all the food chains in a single ecosystem. Each living thing in an ecosystem is part of multiple food chains. Each food chain is one possible path that energy and nutrients may take as they move through the ecosystem. All of the interconnected and overlapping food chains in an ecosystem make up a food web.
+            </p>
+            <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, illo. Aut saepe maxime .</p> -->
+            <button class="btn-1" type="button">Order now</button>
+        </div>
+    </section>
+                <!-- Service Container -->
+    
+
+<div class="container" >
+    <div class="row" >
+        <div class="col-lg-4">
+          <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/img/man.png" alt="">
+          <h1 class="fw-normal"> This is First Heading</h1>
+          <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+          <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/img/man.png" alt="">
+          <h1 class="fw-normal"> This is second Heading</h1>
+          <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+          <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/img/man.png" alt="">
+          <h1 class="fw-normal"> This is Third Heading</h1>
+          <p>And lastly this, the third column of representative placeholder content.we've moved on to the second column.</p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="footer">
+            <p class="pf">Copyright &copy; www.myOnline.com. All right reserved</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+        
+
+
+
+
+    </body>
+</html>
+
